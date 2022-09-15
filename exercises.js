@@ -27,4 +27,22 @@ function exercise2() {
   });
   
 }
- 
+
+function exercise3() {
+  var textboxvalue = document.getElementById('txt').value;
+  const words = textboxvalue.split(' ');
+
+  obj = {};
+
+  for(var i = 0; i < words.length; i++) {
+    if (obj[words[i]] == undefined) {
+        obj[words[i]] = 1;
+    } else {
+        obj[words[i]] ++;
+
+    }
+  }
+
+  Object.values(obj).forEach((freq, word) => console.log(`${words[word]} ${freq}`));
+
+}
