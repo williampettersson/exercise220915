@@ -1,9 +1,30 @@
-console.log("Hello from js!");
 
-function exercise() {
-  console.log('first exersice');
-  var textbox1value = document.getElementById('txt1').value;
-  var textbox2value = document.getElementById('txt2').value;
+function exercise1() {
+  var textboxvalue = document.getElementById('txt').value;
+  const words = textboxvalue.split(' ');
+  console.log(words.length);
 
-  console.log(`${textbox2value}, ${textbox1value}, (${textbox1value.length})`);
+  words.forEach(word => {
+    console.log(`${word} (${word.length})`);
+  });
+
 }
+
+function exercise2() {
+  var textboxvalue = document.getElementById('txt').value;
+  words = textboxvalue.split(' ');
+  
+  const sorted = words.sort((a, b) => a.length - b.length);
+  
+  sorted.forEach(sort => {
+  console.log(`${sort}`);
+  });
+
+  const reversewords = words.reverse();
+
+  reversewords.forEach(reverse => {
+  console.log(`${reverse}`);
+  });
+  
+}
+ 
