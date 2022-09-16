@@ -55,3 +55,25 @@ function exercise3() {
 
 }
 
+function exercise4() {
+  var textboxvalue = document.getElementById('txt').value;
+  const spaces = textboxvalue.replace(/\s/g, '');
+  const letters = spaces.split('');
+
+  obj = {};
+
+  letters.forEach((letter) => {
+    if (obj[letter] == undefined) {
+        obj[letter] = 1;
+    } else {
+        obj[letter] ++;
+
+    }
+  });
+
+  for (const letterfreq in obj) {
+    console.log(`${letterfreq}: (${obj[letterfreq]})`);
+  }
+
+
+}
