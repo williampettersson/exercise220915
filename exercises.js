@@ -20,7 +20,7 @@ function exercise2() {
   console.log(`${sort}`);
   });
 
-  const reversewords = words.reverse();
+  const reversewords = words.reverse(); 
 
   reversewords.forEach(reverse => {
   console.log(`${reverse}`);
@@ -47,4 +47,11 @@ function exercise3() {
     console.log(`${freq} ${obj[freq]}`)
   }
 
+  const sortArray = Array.from(Object.keys(obj));
+  sortArray.sort((a, b) => obj[a] - obj[b]);
+
+  sortArrayReverse = sortArray.reverse();
+  sortArrayReverse.forEach(freq => console.log(`${freq}`));
+
 }
+
