@@ -75,5 +75,18 @@ function exercise4() {
     console.log(`${letterfreq}: (${obj[letterfreq]})`);
   }
 
+}
 
+  function exercise5() {
+  var textboxvalue = document.getElementById('txt');
+  var alphabet = new Map([['a', '4'], ['e', '3'], ['i', '1'], ['g', '9'], ['t', '7']]);
+
+  text = textboxvalue.value.toLowerCase();
+  for (var i=0; i < text.length; i++) {
+    if (alphabet.get(text[i])) {
+      text = text.replace(text[i], alphabet.get(text[i]));
+    }
+  }
+
+  console.log(text);
 }
